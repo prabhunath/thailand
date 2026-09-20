@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>Thailand Trip 2026 — Yadav Family</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --day0-a:#3a1c71; --day0-b:#d76d77; --day0-c:#ffaf7b;
+  --day1-a:#0f2027; --day1-b:#203a43; --day1-c:#2c5364;
+  --day2-a:#005c97; --day2-b:#363795; --day2-c:#00d2ff;
+  --day3-a:#e65c00; --day3-b:#f9d423; --day3-c:#ff9a44;
+  --day4-a:#7b2ff7; --day4-b:#f107a3; --day4-c:#c471ed;
+  --day5-a:#c0392b; --day5-b:#e74c3c; --day5-c:#ff6b6b;
+  --day6-a:#134e5e; --day6-b:#71b280; --day6-c:#a8e063;
+  --quick-a:#1a237e; --quick-b:#283593; --quick-c:#3949ab;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:#0d1117;
+  color:#e6edf3;
+  min-height:100vh;
+  padding:0;
+  overflow-x:hidden;
+}
+
+/* ── HERO HEADER ── */
+.hero{
+  position:relative;
+  padding:40px 20px 30px;
+  text-align:center;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-flag{font-size:3rem;margin-bottom:8px;display:block}
+.hero h1{font-size:1.7rem;font-weight:800;color:#fff;letter-spacing:-0.5px}
+.hero-sub{color:rgba(255,255,255,0.75);font-size:0.95rem;margin-top:6px}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:14px;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:50px;
+  padding:7px 16px;
+  font-size:0.82rem;font-weight:600;color:#fff;
+  backdrop-filter:blur(6px);
+}
+
+/* ── NAV TABS ── */
+.nav-wrap{
+  position:sticky;top:0;z-index:100;
+  background:rgba(13,17,23,0.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  padding:10px 12px;
+  overflow-x:auto;
+  white-space:nowrap;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+.nav-wrap::-webkit-scrollbar{display:none}
+.nav-wrap button{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px;
+  padding:7px 14px;
+  font-size:0.78rem;font-weight:600;
+  color:rgba(255,255,255,0.6);
+  cursor:pointer;
+  transition:all 0.2s;
+  white-space:nowrap;
+  margin-right:6px;
+}
+.nav-wrap button:last-child{margin-right:0}
+.nav-wrap button.active{
+  color:#fff;
+  border-color:rgba(255,255,255,0.4);
+  background:rgba(255,255,255,0.15);
+}
+
+/* ── SECTIONS ── */
+.day-section{display:none}
+.day-section.active{display:block}
+
+/* ── BG BANNER per day ── */
+.day-banner{
+  position:relative;
+  padding:28px 20px 24px;
+  overflow:hidden;
+  min-height:130px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+}
+.day-banner::before{
+  content:'';
+  position:absolute;inset:0;
+  opacity:0.18;
+  background-size:cover;background-position:center;
+}
+.day-banner .overlay{
+  position:absolute;inset:0;
+}
+.day-banner .banner-content{position:relative;z-index:1}
+.day-banner .big-icon{
+  font-size:3.5rem;
+  position:absolute;right:20px;top:50%;transform:translateY(-50%);
+  opacity:0.25;
+  z-index:0;
+}
+.day-banner h2{font-size:1.25rem;font-weight:800;color:#fff;line-height:1.3}
+.day-banner .day-label{
+  font-size:0.7rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;
+  color:rgba(255,255,255,0.6);
+  margin-bottom:6px;
+}
+.day-banner .day-desc{
+  font-size:0.82rem;color:rgba(255,255,255,0.75);margin-top:5px;line-height:1.4;
+}
+
+/* per-day gradients */
+.day0 .day-banner .overlay{background:linear-gradient(135deg,var(--day0-a),var(--day0-b))}
+.day1 .day-banner .overlay{background:linear-gradient(135deg,var(--day1-a),var(--day1-c))}
+.day2 .day-banner .overlay{background:linear-gradient(135deg,var(--day2-a),var(--day2-c))}
+.day3 .day-banner .overlay{background:linear-gradient(135deg,var(--day3-a),var(--day3-b))}
+.day4 .day-banner .overlay{background:linear-gradient(135deg,var(--day4-a),var(--day4-b))}
+.day5 .day-banner .overlay{background:linear-gradient(135deg,var(--day5-a),var(--day5-c))}
+.day6 .day-banner .overlay{background:linear-gradient(135deg,var(--day6-a),var(--day6-b))}
+.quick .day-banner .overlay{background:linear-gradient(135deg,var(--quick-a),var(--quick-c))}
+
+/* accent colour per day (used for time column, section headers) */
+.day0{--accent:#d76d77} .day1{--accent:#48cae4} .day2{--accent:#00d2ff}
+.day3{--accent:#f9d423} .day4{--accent:#f107a3} .day5{--accent:#ff6b6b}
+.day6{--accent:#a8e063} .quick{--accent:#7986cb}
+
+/* ── BODY AREA ── */
+.day-body{padding:16px 16px 32px}
+
+/* ── SECTION LABEL ── */
+.slabel{
+  display:flex;align-items:center;gap:8px;
+  font-size:0.7rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;
+  color:var(--accent);
+  margin:20px 0 10px;
+}
+.slabel::after{
+  content:'';flex:1;
+  height:1px;background:rgba(255,255,255,0.08);
+}
+
+/* ── ALERT BOXES ── */
+.alert{
+  border-radius:12px;
+  padding:12px 14px;
+  margin:10px 0;
+  font-size:0.83rem;
+  line-height:1.6;
+  display:flex;gap:10px;align-items:flex-start;
+}
+.alert .alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+.alert strong{font-weight:700}
+.alert-red   {background:rgba(231,76,60,0.15);border:1px solid rgba(231,76,60,0.35);color:#ffa0a0}
+.alert-green {background:rgba(46,213,115,0.12);border:1px solid rgba(46,213,115,0.3);color:#7be8a8}
+.alert-blue  {background:rgba(52,152,219,0.15);border:1px solid rgba(52,152,219,0.35);color:#90caf9}
+.alert-orange{background:rgba(243,156,18,0.15);border:1px solid rgba(243,156,18,0.35);color:#ffd580}
+
+/* ── TIMELINE (schedule rows) ── */
+.timeline{display:flex;flex-direction:column;gap:0}
+.trow{
+  display:grid;
+  grid-template-columns:72px 1fr;
+  gap:0;
+  position:relative;
+}
+.trow:not(:last-child) .trow-line{
+  position:absolute;
+  left:35px;top:38px;bottom:0;
+  width:2px;
+  background:rgba(255,255,255,0.07);
+  z-index:0;
+}
+.trow-time{
+  padding:12px 8px 12px 0;
+  text-align:right;
+  font-size:0.75rem;font-weight:700;
+  color:var(--accent);
+  line-height:1.3;
+  position:relative;z-index:1;
+}
+.trow-dot{
+  position:absolute;
+  left:29px;top:16px;
+  width:14px;height:14px;
+  border-radius:50%;
+  background:var(--accent);
+  border:2px solid #0d1117;
+  z-index:2;
+  flex-shrink:0;
+}
+.trow-content{
+  padding:10px 0 10px 26px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  position:relative;z-index:1;
+}
+.trow:last-child .trow-content{border-bottom:none}
+.trow-what{font-size:0.88rem;font-weight:700;color:#e6edf3;margin-bottom:3px}
+.trow-detail{font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.55}
+.trow-detail strong{color:rgba(255,255,255,0.85);font-weight:600}
+
+/* highlight rows (departure/arrival) */
+.trow.highlight .trow-content{
+  background:rgba(255,255,255,0.04);
+  border-radius:10px;
+  margin-left:10px;
+  padding:10px 12px 10px 16px;
+}
+.trow.highlight .trow-what{color:var(--accent);font-size:0.9rem}
+
+/* ── CARRY CARDS ── */
+.carry-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:4px;
+}
+.carry-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:10px;
+  padding:10px 12px;
+}
+.carry-card .cc-icon{font-size:1.3rem;margin-bottom:4px;display:block}
+.carry-card .cc-title{font-size:0.8rem;font-weight:700;color:#e6edf3;margin-bottom:3px}
+.carry-card .cc-note{font-size:0.72rem;color:rgba(255,255,255,0.5);line-height:1.45}
+.carry-card.full{grid-column:1/-1}
+
+/* ── PILL ── */
+.pill{
+  display:inline-block;
+  padding:2px 9px;border-radius:20px;
+  font-size:0.72rem;font-weight:700;
+  margin-left:6px;vertical-align:middle;
+}
+.pill-red   {background:rgba(231,76,60,0.2);color:#ff7675;border:1px solid rgba(231,76,60,0.4)}
+.pill-orange{background:rgba(243,156,18,0.2);color:#ffd580;border:1px solid rgba(243,156,18,0.4)}
+.pill-green {background:rgba(46,213,115,0.2);color:#7be8a8;border:1px solid rgba(46,213,115,0.4)}
+
+/* ── CHECKLIST TABLE (pre-trip) ── */
+.check-list{display:flex;flex-direction:column;gap:8px}
+.check-item{
+  display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:10px;
+  padding:10px 12px;
+}
+.check-num{
+  width:24px;height:24px;border-radius:50%;
+  background:var(--accent);
+  color:#000;
+  font-size:0.75rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.check-task{font-size:0.85rem;font-weight:700;color:#e6edf3;margin-bottom:3px}
+.check-detail{font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.5}
+
+/* ── QUICK REF GRID ── */
+.ref-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ref-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px;padding:12px 14px;
+}
+.ref-card.full{grid-column:1/-1}
+.ref-card h4{
+  font-size:0.68rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:1px;
+  color:var(--accent);
+  margin-bottom:8px;
+}
+.ref-row{
+  display:flex;justify-content:space-between;gap:6px;
+  padding:5px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  font-size:0.78rem;
+}
+.ref-row:last-child{border-bottom:none}
+.ref-row span:first-child{color:rgba(255,255,255,0.5)}
+.ref-row span:last-child{font-weight:700;color:#e6edf3;text-align:right}
+
+/* ── MONEY TABLE ── */
+.money-table{width:100%;border-collapse:collapse;font-size:0.8rem;margin-top:6px}
+.money-table th{
+  text-align:left;padding:8px 10px;
+  background:rgba(255,255,255,0.05);
+  color:rgba(255,255,255,0.5);
+  font-size:0.7rem;text-transform:uppercase;letter-spacing:0.5px;
+}
+.money-table td{
+  padding:9px 10px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  vertical-align:top;line-height:1.5;
+  color:rgba(255,255,255,0.75);
+}
+.money-table td:first-child{color:var(--accent);font-weight:700;white-space:nowrap}
+.money-table tr:last-child td{border-bottom:none;color:#e6edf3;font-weight:700}
+
+/* ── TIPS ── */
+.tips-grid{display:flex;flex-direction:column;gap:8px}
+.tip-item{
+  display:flex;gap:10px;align-items:flex-start;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:10px;
+  padding:10px 12px;
+  font-size:0.8rem;
+}
+.tip-icon{font-size:1.1rem;flex-shrink:0}
+.tip-label{font-weight:700;color:#e6edf3;margin-bottom:2px;font-size:0.82rem}
+.tip-text{color:rgba(255,255,255,0.5);line-height:1.5;font-size:0.78rem}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;
+  padding:24px 20px 40px;
+  color:rgba(255,255,255,0.25);
+  font-size:0.75rem;line-height:1.7;
+}
+
+/* ── MOBILE TWEAKS ── */
+@media(max-width:400px){
+  .carry-grid{grid-template-columns:1fr}
+  .carry-card.full{grid-column:auto}
+  .ref-grid{grid-template-columns:1fr}
+  .ref-card.full{grid-column:auto}
+  .hero h1{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-flag">🇹🇭</span>
+  <h1>Thailand Trip 2026</h1>
+  <div class="hero-sub">Prabhunath · Vinita · Vivaan Yadav</div>
+  <div class="hero-badge">✈️ 27 Sep – 2 Oct · Phuket &amp; Bangkok</div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <button onclick="show('day0')" id="btn-day0">✅ Pre-Trip</button>
+  <button onclick="show('day1')" id="btn-day1">✈️ Day 1</button>
+  <button onclick="show('day2')" id="btn-day2">🏝️ Day 2</button>
+  <button onclick="show('day3')" id="btn-day3">🛕 Day 3</button>
+  <button onclick="show('day4')" id="btn-day4">🛫 Day 4</button>
+  <button onclick="show('day5')" id="btn-day5">🎂 Day 5</button>
+  <button onclick="show('day6')" id="btn-day6">🏠 Day 6</button>
+  <button onclick="show('quick')" id="btn-quick">📋 Quick Ref</button>
+</div>
+
+<!-- ═══════ DAY 0 ═══════ -->
+<div class="day-section day0" id="day0">
+  <div class="day-banner">
+    <div class="overlay"></div>
+    <div class="big-icon">📋</div>
+    <div class="banner-content">
+      <div class="day-label">Before You Travel</div>
+      <h2>Pre-Trip Checklist</h2>
+      <div class="day-desc">Complete all tasks before 26 September 2026</div>
+    </div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-red"><div class="alert-icon">🚨</div><div><strong>TDAC on 24 Sep only</strong> — System only allows 3 days ahead. Go to <strong>tdac.immigration.go.th</strong> on 24 Sep and fill for all 3 passports.</div></div>
+
+    <div class="slabel">Tasks to Complete</div>
+    <div class="check-list">
+      <div class="check-item"><div class="check-num">1</div><div><div class="check-task">Thailand TDAC Online <span class="pill pill-red">24 Sep</span></div><div class="check-detail">tdac.immigration.go.th — fill for Prabhunath, Vinita, Vivaan. Date 27 Sep unlocks on 24 Sep. Get QR code for each.</div></div></div>
+      <div class="check-item"><div class="check-num">2</div><div><div class="check-task">Airtel International Roaming <span class="pill pill-orange">Before 27 Sep</span></div><div class="check-detail">Enable as backup. You'll buy a 7-Eleven tourist SIM at Phuket airport for daily data use.</div></div></div>
+      <div class="check-item"><div class="check-num">3</div><div><div class="check-task">Wise Card <span class="pill pill-orange">Before 27 Sep</span></div><div class="check-detail">Confirm international transactions are enabled. Do a small test transaction to verify.</div></div></div>
+      <div class="check-item"><div class="check-num">4</div><div><div class="check-task">Inform Your Bank <span class="pill pill-orange">Before 27 Sep</span></div><div class="check-detail">Call your bank and tell them you are travelling to Thailand from 27 Sep – 2 Oct. Prevents card being blocked.</div></div></div>
+      <div class="check-item"><div class="check-num">5</div><div><div class="check-task">Offline Google Maps <span class="pill pill-orange">Before 27 Sep</span></div><div class="check-detail">Download offline maps for Phuket + Bangkok. Critical — you'll have no SIM for the first hour after landing.</div></div></div>
+      <div class="check-item"><div class="check-num">6</div><div><div class="check-task">Google Translate Offline <span class="pill pill-orange">Before 27 Sep</span></div><div class="check-detail">Download Thai language pack. Use the camera feature to translate menus and signs instantly.</div></div></div>
+      <div class="check-item"><div class="check-num">7</div><div><div class="check-task">Screenshot All Bookings <span class="pill pill-orange">Before 27 Sep</span></div><div class="check-detail">All 8 booking PDFs saved as screenshots on phone — in case of no internet at airport.</div></div></div>
+      <div class="check-item"><div class="check-num">8</div><div><div class="check-task">Download Travel Insurance <span class="pill pill-orange">Before 27 Sep</span></div><div class="check-detail">Goibibo App → My Trips → GOFLISTAN9P45498224 → Download insurance PDF. Policy no: GTMINFIF41529770151108</div></div></div>
+    </div>
+
+    <div class="slabel">TDAC — What You'll Need on 24 Sep</div>
+    <div class="carry-grid">
+      <div class="carry-card"><span class="cc-icon">🛂</span><div class="cc-title">All 3 Passports</div><div class="cc-note">Prabhunath, Vinita, Vivaan</div></div>
+      <div class="carry-card"><span class="cc-icon">✈️</span><div class="cc-title">Flight Details</div><div class="cc-note">IX 904 · Arr 27 Sep · Phuket (HKT)</div></div>
+      <div class="carry-card"><span class="cc-icon">🏨</span><div class="cc-title">Hotel Address</div><div class="cc-note">19 Thanon Sirirat, Tambon Patong, Phuket 83150</div></div>
+      <div class="carry-card"><span class="cc-icon">🏠</span><div class="cc-title">Home Address</div><div class="cc-note">Your address in Gunjur Varthur, Bengaluru</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ DAY 1 ═══════ -->
+<div class="day-section day1" id="day1">
+  <div class="day-banner">
+    <div class="overlay"></div>
+    <div class="big-icon">✈️</div>
+    <div class="banner-content">
+      <div class="day-label">Sunday · 27 September 2026</div>
+      <h2>Bengaluru → Phuket</h2>
+      <div class="day-desc">Flight IX 904 · PNR: L6GM8J · Dep 09:55 IST · Arr 15:35 ICT</div>
+    </div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-blue"><div class="alert-icon">ℹ️</div><div><strong>Time zones today:</strong> Morning times are IST (India). Once you land, switch to ICT (Thailand = IST + 1.5 hrs). Your phone auto-switches on landing.</div></div>
+    <div class="alert alert-orange"><div class="alert-icon">⏰</div><div><strong>Set alarm tonight for 05:30 AM IST</strong> — need to leave home by 06:30 AM to reach BLR T2 by 07:15 AM.</div></div>
+
+    <div class="slabel">Morning — Bengaluru (IST)</div>
+    <div class="timeline">
+      <div class="trow"><div class="trow-time">05:30<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Wake Up</div><div class="trow-detail">Baby bath, everyone dressed. Eat light breakfast at home — airport food is expensive.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">06:30<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Leave Home</div><div class="trow-detail">Cab to BLR Airport Terminal T2. ~50 mins from Gunjur Varthur. Carry baby bag in hand.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">07:15<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Check-in Counter</div><div class="trow-detail">Air India Express (IX) counters. PNR: <strong>L6GM8J</strong>. Say "family with infant and stroller." Stroller gets tagged — keep the receipt. Baggage: 20 kg × 2 adults + 10 kg infant = 50 kg total.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">07:35<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Emigration (Immigration)</div><div class="trow-detail">Hand all 3 passports together. Say "family of 3, including infant." They take fingerprints + photo — completely normal. Show TDAC QR code when asked.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">08:00<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Security Check</div><div class="trow-detail">Laptops out of bag. Liquids in clear bag. Baby food and formula allowed — declare if asked.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">08:30<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">At Departure Gate</div><div class="trow-detail">Find IX 904 on display boards. Buy water at duty-free. Boarding starts ~09:10 AM.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">09:55<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🛫 DEPART BENGALURU</div><div class="trow-detail">Feed Vivaan during takeoff — sucking relieves ear pressure. 4 hrs 10 mins non-stop.</div></div><div class="trow-line"></div></div>
+    </div>
+
+    <div class="slabel">Afternoon — Phuket (ICT)</div>
+    <div class="timeline">
+      <div class="trow highlight"><div class="trow-time">15:35<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🛬 LAND PHUKET</div><div class="trow-detail">Switch phone to Thailand time. Follow signs to Arrivals → Immigration.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">15:40<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Immigration Queue</div><div class="trow-detail">"Foreign Nationals" line. Show passport + TDAC QR. They take fingerprints + photo = normal. Hand all 3 passports together.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">16:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Collect Bags + Customs</div><div class="trow-detail">Check screen for IX 904 belt. Stroller on oversized belt (ask staff). Then walk through Green Channel — just walk through.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">16:15<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Buy Tourist SIM 📱</div><div class="trow-detail">7-Eleven at airport arrivals. Ask: "Tourist SIM, 7 days, unlimited data." ~350 THB. Test WhatsApp + Google Maps before leaving airport.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">16:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Official Airport Taxi</div><div class="trow-detail">Use official taxi counter ONLY — not random people outside. Show hotel address. ~700 THB, ~50 mins to Patong.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">17:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Check-in Hotel 🏨</div><div class="trow-detail">Beautiful Pool Villa · 19 Thanon Sirirat, Patong · Agoda: <strong>2046132305</strong> · Ask for room safe to store cash + passports.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">18:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Freshen Up + Rest</div><div class="trow-detail">Baby bath. Rest 30 mins. You will be tired from long travel day.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">19:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Dinner 🍽️</div><div class="trow-detail">Walk to Bangla Road area. Cooked food only on Day 1 — no raw salads. Bottled water only.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">21:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Back to Hotel</div><div class="trow-detail">Store cash in room safe. Charge all devices. Set alarm <strong>06:00 AM</strong> — Phi Phi tour tomorrow!</div></div></div>
+    </div>
+
+    <div class="slabel">Carry Today</div>
+    <div class="carry-grid">
+      <div class="carry-card full"><span class="cc-icon">🛂</span><div class="cc-title">All 3 Passports + TDAC QR codes</div><div class="cc-note">Most important item. Keep in one dedicated pouch. Never put in checked bag.</div></div>
+      <div class="carry-card"><span class="cc-icon">🎫</span><div class="cc-title">Boarding Passes</div><div class="cc-note">Printed or phone screenshot (offline)</div></div>
+      <div class="carry-card"><span class="cc-icon">👶</span><div class="cc-title">Baby Bag</div><div class="cc-note">6+ diapers, wipes, 2 change of clothes, snacks, milk</div></div>
+      <div class="carry-card"><span class="cc-icon">💵</span><div class="cc-title">3,000 THB accessible</div><div class="cc-note">SIM (350) + taxi (700) + dinner + misc</div></div>
+      <div class="carry-card"><span class="cc-icon">🛺</span><div class="cc-title">Stroller</div><div class="cc-note">For Vivaan at airport — checked in at counter</div></div>
+      <div class="carry-card"><span class="cc-icon">🧳</span><div class="cc-title">All Luggage</div><div class="cc-note">Everything you packed for the trip</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ DAY 2 ═══════ -->
+<div class="day-section day2" id="day2">
+  <div class="day-banner">
+    <div class="overlay"></div>
+    <div class="big-icon">🏝️</div>
+    <div class="banner-content">
+      <div class="day-label">Monday · 28 September 2026</div>
+      <h2>Phi Phi Island Tour</h2>
+      <div class="day-desc">Maya Bay · Monkey Beach · Khai Island · Voucher: TQP327335</div>
+    </div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-blue"><div class="alert-icon">🚐</div><div><strong>Pickup 07:00 AM from hotel lobby.</strong> Operator TTD GLOBAL will WhatsApp you the day before to confirm. Be in lobby by <strong>06:50 AM</strong>. Contact: +66-994-838455</div></div>
+    <div class="alert alert-green"><div class="alert-icon">✅</div><div><strong>National Park fee fully paid</strong> — confirmed by operator TTD GLOBAL. Already included in your Klook price. No cash needed for park entry.</div></div>
+
+    <div class="slabel">Full Day Schedule (ICT)</div>
+    <div class="timeline">
+      <div class="trow"><div class="trow-time">06:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Wake Up</div><div class="trow-detail">Baby bath. Everyone in swimwear + shorts. Apply sunscreen on all 3 — Vivaan's face, arms, legs. Hats on.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">06:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Breakfast</div><div class="trow-detail">Hotel breakfast if included. Otherwise 7-Eleven nearby — open 24 hrs.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">06:50<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Hotel Lobby — Ready</div><div class="trow-detail">Have Klook voucher <strong>TQP327335</strong> on phone. Small backpack only — large bags not allowed on tour.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">07:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🚐 Van Pickup</div><div class="trow-detail">AC tour van collects you from lobby.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">08:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Boat Ramp Pier</div><div class="trow-detail">Check-in. Get snorkel gear + life jackets. Vivaan gets baby life jacket. Welcome drinks. Safety briefing — listen carefully.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">09:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Set Sail ⛵</div><div class="trow-detail">Depart by speedboat to Phi Phi Islands.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">09:20<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Ko Phi Phi Le — Maya Bay</div><div class="trow-detail">White sand, turquoise water. "The Beach" movie location. <strong>Hold Vivaan always near water. Life jacket on him always.</strong></div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">12:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Lunch 🍱</div><div class="trow-detail">Thai buffet at Phi Phi Don beach. Vegetarian available. Feed Vivaan from your plate or his snacks. Rest in shade.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">13:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Monkey Beach ⚠️</div><div class="trow-detail"><strong>Do NOT let Vivaan near monkeys — they bite and scratch.</strong> Observe from distance only. No beach access allowed anyway.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">13:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Koh Khai Island 🤿</div><div class="trow-detail">Beach time + snorkeling. Take turns — one parent in water, one watching Vivaan always.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">16:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Return Boat</div><div class="trow-detail">Vivaan may sleep on the way back. Stay hydrated — boat provides water.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">17:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🏨 Hotel Drop-off</div><div class="trow-detail">Change clothes. Baby bath. Rest 30 mins.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">18:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Dinner</div><div class="trow-detail">Patong Beach area restaurants. You'll be hungry after a full sea day!</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">20:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Pack Day Bag + Sleep</div><div class="trow-detail">Prepare small bag for tomorrow's city tour. Set alarm <strong>06:30 AM</strong>.</div></div></div>
+    </div>
+
+    <div class="slabel">Carry Today</div>
+    <div class="carry-grid">
+      <div class="carry-card"><span class="cc-icon">💵</span><div class="cc-title">500–600 THB cash</div><div class="cc-note">Personal expenses only — snacks, drinks, tip for guide. Park fee already paid.</div></div>
+      <div class="carry-card"><span class="cc-icon">🧴</span><div class="cc-title">Sunscreen SPF 50+</div><div class="cc-note">Reapply every 2 hours — tropical sun is intense</div></div>
+      <div class="carry-card"><span class="cc-icon">👒</span><div class="cc-title">Hats — all 3</div><div class="cc-note">Prabhunath, Vinita, Vivaan</div></div>
+      <div class="carry-card"><span class="cc-icon">🩱</span><div class="cc-title">Swimming Costumes</div><div class="cc-note">Wear under clothes from hotel</div></div>
+      <div class="carry-card"><span class="cc-icon">👶</span><div class="cc-title">Baby Bag</div><div class="cc-note">5 diapers, wipes, snacks, sippy cup</div></div>
+      <div class="carry-card"><span class="cc-icon">👕</span><div class="cc-title">Extra Clothes</div><div class="cc-note">One full set each — you WILL get wet</div></div>
+      <div class="carry-card"><span class="cc-icon">📦</span><div class="cc-title">Dry Bag / Ziplock</div><div class="cc-note">Phones + wallets inside — boat splashes</div></div>
+      <div class="carry-card"><span class="cc-icon">🏖️</span><div class="cc-title">Towel</div><div class="cc-note">Hotel towel or buy cheap at 7-Eleven</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ DAY 3 ═══════ -->
+<div class="day-section day3" id="day3">
+  <div class="day-banner">
+    <div class="overlay"></div>
+    <div class="big-icon">🛕</div>
+    <div class="banner-content">
+      <div class="day-label">Tuesday · 29 September 2026</div>
+      <h2>Phuket City Tour</h2>
+      <div class="day-desc">Big Buddha · Chalong Temple · Old Town · Promthep Cape · Ref: 1447203559</div>
+    </div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-blue"><div class="alert-icon">🚐</div><div><strong>Pickup window: 07:00–07:30 AM.</strong> Operator: Oh-Hoo · <strong>+66-75-630618</strong>. They confirm exact time by call/email. Be ready in lobby from <strong>06:50 AM</strong>.</div></div>
+    <div class="alert alert-orange"><div class="alert-icon">🧳</div><div><strong>Pack for Bangkok tonight!</strong> Last night in Phuket. Pack everything after dinner — leave only tomorrow's clothes + toiletries out.</div></div>
+
+    <div class="slabel">Full Day Schedule (ICT)</div>
+    <div class="timeline">
+      <div class="trow"><div class="trow-time">06:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Wake Up</div><div class="trow-detail">Baby bath. Light cotton clothes, sandals, hat. Sunscreen on all 3.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">07:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Breakfast + Lobby</div><div class="trow-detail">Quick breakfast. Be in lobby by 06:50. Have Agoda ref <strong>1447203559</strong> on phone.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">07:00–<br/>07:30</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🚐 Van Pickup</div><div class="trow-detail">AC van. Easy touring day — not physically intense like yesterday.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">10:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Big Buddha 🙏</div><div class="trow-detail">Massive white statue. Carry Vivaan on steps — steep. <strong>Vinita: cover shoulders + knees</strong> (scarf at gate or bring dupatta).</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">11:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Chalong Temple</div><div class="trow-detail">Remove shoes before entering. Quiet and respectful. Vivaan will be curious — keep him calm and close.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">12:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Phuket Old Town 🎨</div><div class="trow-detail">Colorful Sino-Portuguese buildings. Buy souvenirs here — cheaper than tourist shops.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">13:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Honey + Cashew Farm</div><div class="trow-detail">Free tasting stop. Buy local honey as souvenir if you like.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">14:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Karon Viewpoint</div><div class="trow-detail">Panoramic ocean view. Hold Vivaan near edges and railings.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">14:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Promthep Cape 📸</div><div class="trow-detail">Southernmost tip of Phuket. Stunning sea views on 3 sides. Best family photo spot of the trip.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">15:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🏨 Return to Hotel</div><div class="trow-detail">Pool time at your villa! Always watch Vivaan near water.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">17:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Patong Evening</div><div class="trow-detail">Sunset walk at Patong Beach (~18:00). Jungceylon Mall for AC + shopping.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">19:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Dinner 🍽️</div><div class="trow-detail">Last night in Phuket — treat yourself to a nice sit-down dinner.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">20:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Pack Everything 🧳</div><div class="trow-detail">Full packing for Bangkok. Leave only: tomorrow's clothes + toiletries. Set alarm <strong>07:00 AM</strong>.</div></div></div>
+    </div>
+
+    <div class="slabel">Temple Rules</div>
+    <div class="carry-grid">
+      <div class="carry-card"><span class="cc-icon">👟</span><div class="cc-title">Remove Shoes</div><div class="cc-note">Before entering any temple building</div></div>
+      <div class="carry-card"><span class="cc-icon">🧕</span><div class="cc-title">Cover Up (Women)</div><div class="cc-note">Shoulders + knees. Bring scarf/dupatta</div></div>
+      <div class="carry-card"><span class="cc-icon">🧘</span><div class="cc-title">No Pointing Feet</div><div class="cc-note">Never point feet at Buddha — tuck sideways</div></div>
+      <div class="carry-card"><span class="cc-icon">👶</span><div class="cc-title">Carry Vivaan</div><div class="cc-note">Steps can be steep at Big Buddha</div></div>
+    </div>
+
+    <div class="slabel">Carry Today</div>
+    <div class="carry-grid">
+      <div class="carry-card"><span class="cc-icon">🧴</span><div class="cc-title">Sunscreen + Hats</div><div class="cc-note">All 3 of you</div></div>
+      <div class="carry-card"><span class="cc-icon">🧣</span><div class="cc-title">Scarf / Dupatta</div><div class="cc-note">For Vinita at temples</div></div>
+      <div class="carry-card"><span class="cc-icon">👶</span><div class="cc-title">Baby Bag</div><div class="cc-note">4 diapers, wipes, snacks, water</div></div>
+      <div class="carry-card"><span class="cc-icon">💵</span><div class="cc-title">700 THB cash</div><div class="cc-note">Guide tip 100–200 + souvenirs + snacks</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ DAY 4 ═══════ -->
+<div class="day-section day4" id="day4">
+  <div class="day-banner">
+    <div class="overlay"></div>
+    <div class="big-icon">🛫</div>
+    <div class="banner-content">
+      <div class="day-label">Wednesday · 30 September 2026</div>
+      <h2>Phuket → Bangkok</h2>
+      <div class="day-desc">Flight VZ301 · PNR: TQRCRQ · Dep 10:05 · Check-in iSanook Hotel</div>
+    </div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-red"><div class="alert-icon">🚨</div><div><strong>Leave hotel by 08:00 AM sharp.</strong> Flight at 10:05. Airport is 45 mins away. No room for delay today.</div></div>
+    <div class="alert alert-green"><div class="alert-icon">🚕</div><div><strong>Bangkok taxi tip:</strong> Always say <strong>"meter please"</strong> when getting in. Metered fare = honest fare. Use Grab app as alternative.</div></div>
+
+    <div class="slabel">Full Day Schedule (ICT)</div>
+    <div class="timeline">
+      <div class="trow"><div class="trow-time">07:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Wake Up</div><div class="trow-detail">Bags packed last night. Quick baby routine. Fast breakfast.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">07:45<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Check-out</div><div class="trow-detail">Return key. Collect ALL items from room safe — passports, cash, cards. Get check-out receipt.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">08:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🚗 Leave Hotel — MUST</div><div class="trow-detail">Taxi to Phuket Airport. Show "Phuket International Airport" on Maps. ~700 THB.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">08:45<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Phuket Airport — Terminal D</div><div class="trow-detail">Thai Vietjet (VZ) check-in counters. PNR: <strong>TQRCRQ</strong>. Mention infant + stroller.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">09:15<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Security + Gate</div><div class="trow-detail">Domestic Thailand flight — no immigration needed. Much simpler and faster than international.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">10:05<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🛫 DEPART PHUKET</div><div class="trow-detail">VZ301 · 1 hr 40 mins to Bangkok. Your SIM works in Bangkok too.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">11:45<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🛬 LAND BANGKOK</div><div class="trow-detail">Suvarnabhumi Airport (BKK). Large airport — follow signs carefully.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">12:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Collect Bags</div><div class="trow-detail">Baggage belt + stroller at oversized belt. Ask staff if unsure where.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">12:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Metered Taxi to Hotel</div><div class="trow-detail">Official taxi counter. Say <strong>"meter please"</strong>. Show: iSanook Hotel, 118 Soi Songphra, Siphraya Road, Silom, Bangkok. ~400 THB + ~75 THB tolls.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">13:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🏨 Check-in iSanook Bangkok</div><div class="trow-detail">Agoda: <strong>2046134181</strong> · 118 Soi Songphra, Silom · +66-2-633-3636 · Show passport.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">14:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Lunch + Rest</div><div class="trow-detail">Hotel café or nearby restaurant. Take it easy after a travel morning.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">15:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Light Explore</div><div class="trow-detail">Asiatique Riverfront (10 min Grab) — outdoor market, Ferris wheel, family friendly. Or rest at hotel.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">19:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Dinner</div><div class="trow-detail">Silom area restaurants or hotel. Early night — tomorrow is Vivaan's birthday!</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">20:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Sleep</div><div class="trow-detail">Set alarm <strong>07:30 AM</strong>. Tomorrow is the big birthday day!</div></div></div>
+    </div>
+
+    <div class="slabel">Carry Today</div>
+    <div class="carry-grid">
+      <div class="carry-card full"><span class="cc-icon">🛂</span><div class="cc-title">All 3 Passports</div><div class="cc-note">Needed for Bangkok hotel check-in</div></div>
+      <div class="carry-card"><span class="cc-icon">🧳</span><div class="cc-title">All Luggage</div><div class="cc-note">Everything — you're moving cities today</div></div>
+      <div class="carry-card"><span class="cc-icon">👶</span><div class="cc-title">Baby Bag</div><div class="cc-note">Full supplies for travel day</div></div>
+      <div class="carry-card"><span class="cc-icon">💵</span><div class="cc-title">2,000 THB accessible</div><div class="cc-note">Taxis + lunch + dinner</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ DAY 5 ═══════ -->
+<div class="day-section day5" id="day5">
+  <div class="day-banner">
+    <div class="overlay"></div>
+    <div class="big-icon">🎂</div>
+    <div class="banner-content">
+      <div class="day-label">Thursday · 1 October 2026</div>
+      <h2>Vivaan's 2nd Birthday! 🎉</h2>
+      <div class="day-desc">Bangkok Sightseeing · Chao Phraya Cruise 19:45 · Voucher: AEX958123</div>
+    </div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-red"><div class="alert-icon">⏰</div><div><strong>Cruise check-in at ICONSIAM Pier 4 opens 18:00 — board by 19:25 latest.</strong> Latecomers cannot be refunded. No excuses — be there on time.</div></div>
+    <div class="alert alert-green"><div class="alert-icon">🎂</div><div><strong>Birthday cake confirmed!</strong> Free cake with song arranged on cruise — Klook booking AEX958123 · DOB 1 Oct 2024 noted. Remind staff at check-in. Also confirm vegetarian meal.</div></div>
+
+    <div class="slabel">Full Day Schedule (ICT)</div>
+    <div class="timeline">
+      <div class="trow highlight"><div class="trow-time">07:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🎂 HAPPY BIRTHDAY VIVAAN!</div><div class="trow-detail">Wish him first thing! Sing birthday song. Take photos and videos. Special morning.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">08:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Birthday Breakfast</div><div class="trow-detail">Nice café near hotel. Let Vivaan enjoy the morning freely.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">09:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Wat Pho — Reclining Buddha 🛕</div><div class="trow-detail">15 min Grab taxi. Entry ~200 THB/adult, infant free. 1 hour visit. Remove shoes. Carry Vivaan on steps.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">10:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Wat Arun — Temple of Dawn</div><div class="trow-detail">Short river ferry from Wat Pho (~5 THB each). Stunning white temple — best photo of the trip. 45 mins.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">12:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Return Hotel + Lunch</div><div class="trow-detail">Grab taxi back ~150 THB. Lunch near hotel.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">13:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Baby Nap + You Rest 😴</div><div class="trow-detail">Vivaan sleeps 1.5 hrs. You rest too. Long evening ahead — don't skip this.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">14:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Get Ready 👔</div><div class="trow-detail">Smart casuals. Vinita: nice dress or saree. Vivaan: birthday outfit. Prabhunath: clean shirt + trousers.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">15:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Head to ICONSIAM Mall 🛍️</div><div class="trow-detail">Grab taxi ~25 mins from Silom. World-class mall on the Chao Phraya River.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">15:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">ICONSIAM — SookSiam Floor</div><div class="trow-detail">Indoor Thai cultural floating market. Amazing for photos + souvenirs. Fully stroller accessible.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">17:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Walk to Pier 4</div><div class="trow-detail">Pier is at ICONSIAM riverfront. Short walk from mall. Follow signs to "Pier 4."</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">18:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🚢 CRUISE CHECK-IN</div><div class="trow-detail">Show Klook voucher <strong>AEX958123</strong>. Confirm: vegetarian meal + birthday cake for Vivaan (DOB 1 Oct 2024).</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">19:25<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Board Cruise — DEADLINE</div><div class="trow-detail">Must be on board by 19:25. Stroller accessible. Find your table.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">19:45<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🛳️ CRUISE DEPARTS</div><div class="trow-detail">Dinner buffet (Thai + international, vegetarian). Live music. Thai classical dance. Cabaret show. River views of Grand Palace + temples lit at night.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">~20:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🎂 BIRTHDAY CAKE on the River!</div><div class="trow-detail">Crew brings cake with birthday song for Vivaan. Grand Palace and Wat Arun glowing behind you. Unforgettable moment.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">21:45<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Cruise Ends</div><div class="trow-detail">Returns to ICONSIAM Pier 4.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">22:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Grab Taxi to Hotel</div><div class="trow-detail">~200 THB. Vivaan will be asleep.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">22:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Hotel — Pack + Sleep</div><div class="trow-detail">Baby to bed. <strong>Pack EVERYTHING tonight</strong> — flight at 08:05 tomorrow. Set alarm <strong>05:30 AM</strong>.</div></div></div>
+    </div>
+
+    <div class="slabel">Carry Today</div>
+    <div class="carry-grid">
+      <div class="carry-card full"><span class="cc-icon">🎫</span><div class="cc-title">Klook Voucher AEX958123</div><div class="cc-note">Screenshot offline on phone — cruise booking</div></div>
+      <div class="carry-card"><span class="cc-icon">👗</span><div class="cc-title">Smart Casuals</div><div class="cc-note">Cruise dinner — look presentable</div></div>
+      <div class="carry-card"><span class="cc-icon">🎂</span><div class="cc-title">Vivaan Birthday Outfit</div><div class="cc-note">Special day — dress him up!</div></div>
+      <div class="carry-card"><span class="cc-icon">💵</span><div class="cc-title">3,000 THB cash</div><div class="cc-note">Temple entries + Grab taxis + tips</div></div>
+      <div class="carry-card"><span class="cc-icon">👶</span><div class="cc-title">Baby Bag</div><div class="cc-note">Full supplies + extra diaper for late night</div></div>
+      <div class="carry-card"><span class="cc-icon">📸</span><div class="cc-title">Camera / Phone</div><div class="cc-note">Birthday on a river — once in a lifetime!</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ DAY 6 ═══════ -->
+<div class="day-section day6" id="day6">
+  <div class="day-banner">
+    <div class="overlay"></div>
+    <div class="big-icon">🏠</div>
+    <div class="banner-content">
+      <div class="day-label">Friday · 2 October 2026</div>
+      <h2>Bangkok → Home Bengaluru</h2>
+      <div class="day-desc">Flight 6E1214 · PNR: HHB4PE · Dep 08:05 ICT · Arr 10:15 IST</div>
+    </div>
+  </div>
+  <div class="day-body">
+
+    <div class="alert alert-red"><div class="alert-icon">🚨</div><div><strong>Flight at 08:05 AM — Leave hotel by 06:00 AM.</strong> International departure needs ~2 hrs. Book Grab the night before or at 05:30 AM sharp.</div></div>
+    <div class="alert alert-orange"><div class="alert-icon">🧳</div><div><strong>Pack tonight (1 Oct evening)</strong> so this morning is smooth. Leave only tomorrow's clothes + toiletries out.</div></div>
+
+    <div class="slabel">Full Day Schedule</div>
+    <div class="timeline">
+      <div class="trow"><div class="trow-time">05:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Wake Up</div><div class="trow-detail">Bags packed last night. Quick baby routine.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">05:45<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Check-out</div><div class="trow-detail">Return key. Collect ALL from room safe. Get hotel receipt.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">06:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🚗 Leave Hotel — MUST</div><div class="trow-detail">Grab taxi to Suvarnabhumi Airport. ~400 THB + tolls. ~40 mins at this early hour.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">06:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Airport — IndiGo Check-in</div><div class="trow-detail">6E check-in counters. PNR: <strong>HHB4PE</strong>. Mention infant + stroller. 20 kg per passenger.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">06:50<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Immigration — Exit Thailand</div><div class="trow-detail">Exit stamp from Thailand. Show passport + boarding pass. Last immigration of the trip.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">07:15<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Security + Gate</div><div class="trow-detail">Find gate for 6E1214. Spend leftover THB at duty-free before security.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">08:05<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🛫 DEPART BANGKOK</div><div class="trow-detail">6E1214 · 3 hrs 40 mins. Feed Vivaan during takeoff. You're going home!</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">10:15<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🛬 LAND BENGALURU</div><div class="trow-detail">Terminal T2. Switch phone back to IST. Follow signs to baggage claim.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">10:30<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Collect Bags</div><div class="trow-detail">Baggage belt + stroller at oversized belt.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">10:45<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Customs</div><div class="trow-detail">Green channel — just walk through. Nothing to declare.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">11:00<br/>IST</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🏠 HOME!</div><div class="trow-detail">Ola/Uber to Gunjur Varthur — ~45 mins. Welcome home, Yadav family! 🎉</div></div></div>
+    </div>
+
+    <div class="slabel">Carry Today</div>
+    <div class="carry-grid">
+      <div class="carry-card full"><span class="cc-icon">🛂</span><div class="cc-title">All 3 Passports</div><div class="cc-note">Needed for immigration exit stamp</div></div>
+      <div class="carry-card"><span class="cc-icon">🧳</span><div class="cc-title">All Luggage</div><div class="cc-note">Everything going home</div></div>
+      <div class="carry-card"><span class="cc-icon">👶</span><div class="cc-title">Baby Bag</div><div class="cc-note">Snacks + diapers for 3.5 hr flight</div></div>
+      <div class="carry-card"><span class="cc-icon">💵</span><div class="cc-title">Leftover THB</div><div class="cc-note">Spend at duty-free OR convert at BLR airport</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ QUICK REF ═══════ -->
+<div class="day-section quick" id="quick">
+  <div class="day-banner">
+    <div class="overlay"></div>
+    <div class="big-icon">📋</div>
+    <div class="banner-content">
+      <div class="day-label">Always Keep This Handy</div>
+      <h2>Quick Reference Card</h2>
+      <div class="day-desc">All bookings · Emergency numbers · Money guide · Tips</div>
+    </div>
+  </div>
+  <div class="day-body">
+
+    <div class="slabel">Flight Bookings</div>
+    <div class="ref-grid">
+      <div class="ref-card"><h4>✈️ BLR → Phuket</h4><div class="ref-row"><span>Flight</span><span>IX 904</span></div><div class="ref-row"><span>PNR</span><span>L6GM8J</span></div><div class="ref-row"><span>Dep</span><span>09:55 IST, 27 Sep</span></div><div class="ref-row"><span>Airline</span><span>044-40013001</span></div></div>
+      <div class="ref-card"><h4>✈️ Phuket → Bangkok</h4><div class="ref-row"><span>Flight</span><span>VZ301</span></div><div class="ref-row"><span>PNR</span><span>TQRCRQ</span></div><div class="ref-row"><span>Dep</span><span>10:05 ICT, 30 Sep</span></div></div>
+      <div class="ref-card full"><h4>✈️ Bangkok → BLR</h4><div class="ref-row"><span>Flight</span><span>6E1214</span></div><div class="ref-row"><span>PNR</span><span>HHB4PE</span></div><div class="ref-row"><span>Dep</span><span>08:05 ICT, 2 Oct</span></div><div class="ref-row"><span>Booking</span><span>BIN-33573890</span></div></div>
+    </div>
+
+    <div class="slabel">Hotels</div>
+    <div class="ref-grid">
+      <div class="ref-card"><h4>🏨 Phuket — Beautiful Pool Villa</h4><div class="ref-row"><span>Agoda</span><span>2046132305</span></div><div class="ref-row"><span>Check-in</span><span>27 Sep</span></div><div class="ref-row"><span>Check-out</span><span>30 Sep</span></div><div class="ref-row"><span>Address</span><span>19 Thanon Sirirat, Patong</span></div></div>
+      <div class="ref-card"><h4>🏨 Bangkok — iSanook Hotel</h4><div class="ref-row"><span>Agoda</span><span>2046134181</span></div><div class="ref-row"><span>Check-in</span><span>30 Sep</span></div><div class="ref-row"><span>Check-out</span><span>2 Oct</span></div><div class="ref-row"><span>Phone</span><span>+66-2-633-3636</span></div></div>
+    </div>
+
+    <div class="slabel">Activities</div>
+    <div class="ref-grid">
+      <div class="ref-card"><h4>🏝️ Phi Phi Tour — 28 Sep</h4><div class="ref-row"><span>Klook</span><span>TQP327335</span></div><div class="ref-row"><span>Pickup</span><span>07:00 AM lobby</span></div><div class="ref-row"><span>WhatsApp</span><span>+66-994-838455</span></div></div>
+      <div class="ref-card"><h4>🛕 Phuket City Tour — 29 Sep</h4><div class="ref-row"><span>Agoda</span><span>1447203559</span></div><div class="ref-row"><span>Pickup</span><span>07:00–07:30 AM</span></div><div class="ref-row"><span>Oh-Hoo</span><span>+66-75-630618</span></div></div>
+      <div class="ref-card full"><h4>🚢 Bangkok Cruise — 1 Oct (Vivaan's Birthday!)</h4><div class="ref-row"><span>Klook</span><span>AEX958123</span></div><div class="ref-row"><span>Check-in</span><span>18:00 · Board by 19:25</span></div><div class="ref-row"><span>Departs</span><span>19:45 · Returns 21:45</span></div><div class="ref-row"><span>WhatsApp</span><span>+66-994-838455</span></div></div>
+    </div>
+
+    <div class="slabel">Emergency Numbers</div>
+    <div class="ref-grid">
+      <div class="ref-card"><h4>🚨 Thailand Emergency</h4><div class="ref-row"><span>Tourist Police</span><span>1155</span></div><div class="ref-row"><span>Ambulance</span><span>1669</span></div><div class="ref-row"><span>Emergency</span><span>191</span></div></div>
+      <div class="ref-card"><h4>🏥 Hospitals</h4><div class="ref-row"><span>Bangkok Hosp. Phuket</span><span>+66-76-254-425</span></div><div class="ref-row"><span>Bumrungrad Bangkok</span><span>+66-2-667-1000</span></div></div>
+      <div class="ref-card full"><h4>🇮🇳 Indian Embassy + Insurance</h4><div class="ref-row"><span>Indian Embassy Bangkok</span><span>+66-2-258-0300</span></div><div class="ref-row"><span>Insurance Policy</span><span>GTMINFIF41529770151108</span></div><div class="ref-row"><span>Goibibo Booking</span><span>GOFLISTAN9P45498224</span></div></div>
+    </div>
+
+    <div class="slabel">Money Guide — Your 40,000 THB</div>
+    <table class="money-table">
+      <tr><th>Day</th><th>Est. Spend</th><th>Main Expenses</th></tr>
+      <tr><td>Day 1 · 27 Sep</td><td>~2,500</td><td>SIM 350 + taxi 700 + dinner 500 + misc</td></tr>
+      <tr><td>Day 2 · 28 Sep</td><td>~600</td><td>Personal snacks/drinks/tips only. Park fee paid.</td></tr>
+      <tr><td>Day 3 · 29 Sep</td><td>~1,500</td><td>Guide tip + souvenirs + dinner</td></tr>
+      <tr><td>Day 4 · 30 Sep</td><td>~2,500</td><td>Phuket taxi 700 + BKK taxi 500 + meals</td></tr>
+      <tr><td>Day 5 · 1 Oct</td><td>~3,000</td><td>Temple entries + Grab taxis + birthday treats + tips</td></tr>
+      <tr><td>Day 6 · 2 Oct</td><td>~500</td><td>Taxi to airport</td></tr>
+      <tr><td>Shopping buffer</td><td>5,000–8,000</td><td>Souvenirs, clothes, extra food, emergencies</td></tr>
+      <tr><td>TOTAL ESTIMATE</td><td>~16,000–18,600</td><td>You have 40,000 THB — very comfortable buffer remaining</td></tr>
+    </table>
+
+    <div class="slabel">Tips for First International Trip</div>
+    <div class="tips-grid">
+      <div class="tip-item"><div class="tip-icon">🚕</div><div><div class="tip-label">Bangkok Taxi</div><div class="tip-text">Always say "meter please." Use Grab app — set destination in app, shows fare upfront, no haggling.</div></div></div>
+      <div class="tip-item"><div class="tip-icon">💧</div><div><div class="tip-label">Water</div><div class="tip-text">Drink bottled water only. Never tap water anywhere in Thailand.</div></div></div>
+      <div class="tip-item"><div class="tip-icon">🛕</div><div><div class="tip-label">At Temples</div><div class="tip-text">Remove shoes. Women cover shoulders + knees. Never point feet at Buddha.</div></div></div>
+      <div class="tip-item"><div class="tip-icon">👶</div><div><div class="tip-label">Vivaan Near Water</div><div class="tip-text">Life jacket always on near sea. Never near monkeys. Thailand beaches have strong waves.</div></div></div>
+      <div class="tip-item"><div class="tip-icon">💳</div><div><div class="tip-label">Paying</div><div class="tip-text">Cards work at malls + big restaurants. Small stalls and street food = cash only.</div></div></div>
+      <div class="tip-item"><div class="tip-icon">🤝</div><div><div class="tip-label">Tipping</div><div class="tip-text">Not mandatory. 20–50 THB at restaurants. 100 THB for tour guides. Always appreciated.</div></div></div>
+      <div class="tip-item"><div class="tip-icon">📱</div><div><div class="tip-label">Google Translate</div><div class="tip-text">Camera feature — point at any Thai text to translate instantly. Works offline too.</div></div></div>
+      <div class="tip-item"><div class="tip-icon">🛒</div><div><div class="tip-label">Baby Supplies</div><div class="tip-text">Pampers, baby food, formula available at every 7-Eleven in Thailand. Don't overpack these.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  Thailand Trip 2026 · Prabhunath · Vinita · Vivaan Yadav<br/>
+  27 Sep – 2 Oct · Phuket &amp; Bangkok<br/>
+  All times in Thailand ICT (= IST + 1.5 hrs) · Day 1 BLR departure is IST
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.day-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-wrap button').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('btn-'+id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+show('day1');
+</script>
+</body>
+</html>
