@@ -179,39 +179,43 @@ body{
 .timeline{display:flex;flex-direction:column;gap:0}
 .trow{
   display:grid;
-  grid-template-columns:72px 1fr;
+  grid-template-columns:58px 20px 1fr;
   gap:0;
   position:relative;
 }
 .trow:not(:last-child) .trow-line{
   position:absolute;
-  left:35px;top:38px;bottom:0;
+  left:67px;top:38px;bottom:0;
   width:2px;
   background:rgba(255,255,255,0.07);
   z-index:0;
 }
 .trow-time{
-  padding:12px 8px 12px 0;
+  padding:12px 4px 12px 0;
   text-align:right;
-  font-size:0.75rem;font-weight:700;
+  font-size:0.72rem;font-weight:700;
   color:var(--accent);
   line-height:1.3;
   position:relative;z-index:1;
+  min-width:0;
+  word-break:keep-all;
 }
 .trow-dot{
-  position:absolute;
-  left:29px;top:16px;
+  position:relative;
+  top:16px;
   width:14px;height:14px;
   border-radius:50%;
   background:var(--accent);
   border:2px solid #0d1117;
   z-index:2;
   flex-shrink:0;
+  margin:0 auto;
 }
 .trow-content{
-  padding:10px 0 10px 26px;
+  padding:10px 0 10px 12px;
   border-bottom:1px solid rgba(255,255,255,0.05);
   position:relative;z-index:1;
+  min-width:0;
 }
 .trow:last-child .trow-content{border-bottom:none}
 .trow-what{font-size:0.88rem;font-weight:700;color:#e6edf3;margin-bottom:3px}
@@ -222,8 +226,8 @@ body{
 .trow.highlight .trow-content{
   background:rgba(255,255,255,0.04);
   border-radius:10px;
-  margin-left:10px;
-  padding:10px 12px 10px 16px;
+  margin-left:4px;
+  padding:10px 12px 10px 12px;
 }
 .trow.highlight .trow-what{color:var(--accent);font-size:0.9rem}
 
@@ -567,7 +571,7 @@ body{
     <div class="banner-content">
       <div class="day-label">Wednesday · 30 September 2026</div>
       <h2>Phuket → Bangkok</h2>
-      <div class="day-desc">Flight VZ301 · PNR: TQRCRQ · Dep 10:05 · Check-in iSanook Hotel</div>
+      <div class="day-desc">Flight VZ301 · PNR: TQRCRQ · Dep 10:05 · Asiatique + Dinner + Birthday Cake!</div>
     </div>
   </div>
   <div class="day-body">
@@ -587,10 +591,15 @@ body{
       <div class="trow"><div class="trow-time">12:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Collect Bags</div><div class="trow-detail">Baggage belt + stroller at oversized belt. Ask staff if unsure where.</div></div><div class="trow-line"></div></div>
       <div class="trow"><div class="trow-time">12:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Metered Taxi to Hotel</div><div class="trow-detail">Official taxi counter. Say <strong>"meter please"</strong>. Show: iSanook Hotel, 118 Soi Songphra, Siphraya Road, Silom, Bangkok. ~400 THB + ~75 THB tolls.</div></div><div class="trow-line"></div></div>
       <div class="trow highlight"><div class="trow-time">13:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🏨 Check-in iSanook Bangkok</div><div class="trow-detail">Agoda: <strong>2046134181</strong> · 118 Soi Songphra, Silom · +66-2-633-3636 · Show passport.</div></div><div class="trow-line"></div></div>
-      <div class="trow"><div class="trow-time">14:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Lunch + Rest</div><div class="trow-detail">Hotel café or nearby restaurant. Take it easy after a travel morning.</div></div><div class="trow-line"></div></div>
-      <div class="trow"><div class="trow-time">15:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Light Explore</div><div class="trow-detail">Asiatique Riverfront (10 min Grab) — outdoor market, Ferris wheel, family friendly. Or rest at hotel.</div></div><div class="trow-line"></div></div>
-      <div class="trow"><div class="trow-time">19:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Dinner</div><div class="trow-detail">Silom area restaurants or hotel. Early night — tomorrow is Vivaan's birthday!</div></div><div class="trow-line"></div></div>
-      <div class="trow"><div class="trow-time">20:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Sleep</div><div class="trow-detail">Set alarm <strong>07:30 AM</strong>. Tomorrow is the big birthday day!</div></div></div>
+      <div class="trow"><div class="trow-time">14:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Lunch + Rest at Hotel</div><div class="trow-detail">Hotel café or nearby restaurant. Baby nap time. You rest too — travel day was tiring.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">15:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Get Ready</div><div class="trow-detail">Freshen up. Comfortable evening clothes. Stroller + baby bag ready.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">16:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🌆 Head to Asiatique Riverfront</div><div class="trow-detail">Grab taxi ~10 mins from Silom, ~80–100 THB. Asiatique is best after 5 PM when lights come on. Arrive early to explore before dinner.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">17:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Asiatique — Explore + Shopping 🛍️</div><div class="trow-detail">Outdoor riverside night market. 1,500+ shops. Clothes, souvenirs, Thai handicrafts. Good prices. Stroller friendly. Vivaan will love the open space and lights.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">18:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🎂 Buy Birthday Cake at Asiatique!</div><div class="trow-detail">Find S&P Bakery or any cake shop inside Asiatique. Pick a small birthday cake — ask them to write "Happy Birthday Vivaan" (~50 THB extra). Cost: ~300–600 THB. Carry it back to hotel.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">19:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Dinner at Asiatique 🍽️</div><div class="trow-detail">Many restaurants along the river — great ambiance, fairy lights, Ferris wheel views. Vegetarian options available. Sit by the river if possible.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">20:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Grab Taxi Back to Hotel</div><div class="trow-detail">~80–100 THB. Carry cake carefully!</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">21:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🎂 Mini Birthday Celebration at Hotel!</div><div class="trow-detail">Candles on cake, sing Happy Birthday to Vivaan in the room. Photos + videos. His first birthday surprise — one day before the big cruise celebration tomorrow!</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">22:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Sleep</div><div class="trow-detail">Set alarm <strong>07:30 AM</strong>. Tomorrow is Vivaan's actual birthday — big day ahead!</div></div></div>
     </div>
 
     <div class="slabel">Carry Today</div>
@@ -598,7 +607,7 @@ body{
       <div class="carry-card full"><span class="cc-icon">🛂</span><div class="cc-title">All 3 Passports</div><div class="cc-note">Needed for Bangkok hotel check-in</div></div>
       <div class="carry-card"><span class="cc-icon">🧳</span><div class="cc-title">All Luggage</div><div class="cc-note">Everything — you're moving cities today</div></div>
       <div class="carry-card"><span class="cc-icon">👶</span><div class="cc-title">Baby Bag</div><div class="cc-note">Full supplies for travel day</div></div>
-      <div class="carry-card"><span class="cc-icon">💵</span><div class="cc-title">2,000 THB accessible</div><div class="cc-note">Taxis + lunch + dinner</div></div>
+      <div class="carry-card"><span class="cc-icon">💵</span><div class="cc-title">3,000 THB accessible</div><div class="cc-note">Taxis + lunch + dinner + shopping + birthday cake at Asiatique</div></div>
     </div>
   </div>
 </div>
@@ -611,7 +620,7 @@ body{
     <div class="banner-content">
       <div class="day-label">Thursday · 1 October 2026</div>
       <h2>Vivaan's 2nd Birthday! 🎉</h2>
-      <div class="day-desc">Bangkok Sightseeing · Chao Phraya Cruise 19:45 · Voucher: AEX958123</div>
+      <div class="day-desc">Siam Paragon · ICONSIAM · Chao Phraya Cruise 19:45 · Voucher: AEX958123</div>
     </div>
   </div>
   <div class="day-body">
@@ -623,11 +632,11 @@ body{
     <div class="timeline">
       <div class="trow highlight"><div class="trow-time">07:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🎂 HAPPY BIRTHDAY VIVAAN!</div><div class="trow-detail">Wish him first thing! Sing birthday song. Take photos and videos. Special morning.</div></div><div class="trow-line"></div></div>
       <div class="trow"><div class="trow-time">08:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Birthday Breakfast</div><div class="trow-detail">Nice café near hotel. Let Vivaan enjoy the morning freely.</div></div><div class="trow-line"></div></div>
-      <div class="trow"><div class="trow-time">09:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Wat Pho — Reclining Buddha 🛕</div><div class="trow-detail">15 min Grab taxi. Entry ~200 THB/adult, infant free. 1 hour visit. Remove shoes. Carry Vivaan on steps.</div></div><div class="trow-line"></div></div>
-      <div class="trow"><div class="trow-time">10:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Wat Arun — Temple of Dawn</div><div class="trow-detail">Short river ferry from Wat Pho (~5 THB each). Stunning white temple — best photo of the trip. 45 mins.</div></div><div class="trow-line"></div></div>
-      <div class="trow"><div class="trow-time">12:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Return Hotel + Lunch</div><div class="trow-detail">Grab taxi back ~150 THB. Lunch near hotel.</div></div><div class="trow-line"></div></div>
-      <div class="trow"><div class="trow-time">13:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Baby Nap + You Rest 😴</div><div class="trow-detail">Vivaan sleeps 1.5 hrs. You rest too. Long evening ahead — don't skip this.</div></div><div class="trow-line"></div></div>
-      <div class="trow"><div class="trow-time">14:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Get Ready 👔</div><div class="trow-detail">Smart casuals. Vinita: nice dress or saree. Vivaan: birthday outfit. Prabhunath: clean shirt + trousers.</div></div><div class="trow-line"></div></div>
+      <div class="trow highlight"><div class="trow-time">10:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">🛍️ Siam Paragon Mall</div><div class="trow-detail">Grab taxi ~25 min from Silom, ~150 THB. Bangkok's most famous premium mall. Opens 10:00 AM. All floors — fashion, electronics, kids section, aquarium (optional). Fully stroller accessible.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">10:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Shopping at Siam Paragon</div><div class="trow-detail">3 hours — explore at your own pace. Great food court (Gourmet Market B1) for lunch. Buy whatever you've been planning!</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">13:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Lunch inside Siam Paragon</div><div class="trow-detail">Food court or restaurant inside the mall. Vegetarian options available. Feed Vivaan here.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">14:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Return Hotel + Baby Nap 😴</div><div class="trow-detail">Grab taxi back ~150 THB. Vivaan sleeps 1.5 hrs. You rest too — long evening ahead.</div></div><div class="trow-line"></div></div>
+      <div class="trow"><div class="trow-time">15:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Get Ready 👔</div><div class="trow-detail">Smart casuals. Vinita: nice dress or saree. Vivaan: birthday outfit. Prabhunath: clean shirt + trousers.</div></div><div class="trow-line"></div></div>
       <div class="trow"><div class="trow-time">15:00<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Head to ICONSIAM Mall 🛍️</div><div class="trow-detail">Grab taxi ~25 mins from Silom. World-class mall on the Chao Phraya River.</div></div><div class="trow-line"></div></div>
       <div class="trow"><div class="trow-time">15:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">ICONSIAM — SookSiam Floor</div><div class="trow-detail">Indoor Thai cultural floating market. Amazing for photos + souvenirs. Fully stroller accessible.</div></div><div class="trow-line"></div></div>
       <div class="trow"><div class="trow-time">17:30<br/>ICT</div><div class="trow-dot"></div><div class="trow-content"><div class="trow-what">Walk to Pier 4</div><div class="trow-detail">Pier is at ICONSIAM riverfront. Short walk from mall. Follow signs to "Pier 4."</div></div><div class="trow-line"></div></div>
@@ -645,7 +654,7 @@ body{
       <div class="carry-card full"><span class="cc-icon">🎫</span><div class="cc-title">Klook Voucher AEX958123</div><div class="cc-note">Screenshot offline on phone — cruise booking</div></div>
       <div class="carry-card"><span class="cc-icon">👗</span><div class="cc-title">Smart Casuals</div><div class="cc-note">Cruise dinner — look presentable</div></div>
       <div class="carry-card"><span class="cc-icon">🎂</span><div class="cc-title">Vivaan Birthday Outfit</div><div class="cc-note">Special day — dress him up!</div></div>
-      <div class="carry-card"><span class="cc-icon">💵</span><div class="cc-title">3,000 THB cash</div><div class="cc-note">Temple entries + Grab taxis + tips</div></div>
+      <div class="carry-card"><span class="cc-icon">💵</span><div class="cc-title">4,000 THB cash</div><div class="cc-note">Siam Paragon shopping + Grab taxis + ICONSIAM + tips</div></div>
       <div class="carry-card"><span class="cc-icon">👶</span><div class="cc-title">Baby Bag</div><div class="cc-note">Full supplies + extra diaper for late night</div></div>
       <div class="carry-card"><span class="cc-icon">📸</span><div class="cc-title">Camera / Phone</div><div class="cc-note">Birthday on a river — once in a lifetime!</div></div>
     </div>
@@ -740,7 +749,7 @@ body{
       <tr><td>Day 2 · 28 Sep</td><td>~600</td><td>Personal snacks/drinks/tips only. Park fee paid.</td></tr>
       <tr><td>Day 3 · 29 Sep</td><td>~1,500</td><td>Guide tip + souvenirs + dinner</td></tr>
       <tr><td>Day 4 · 30 Sep</td><td>~2,500</td><td>Phuket taxi 700 + BKK taxi 500 + meals</td></tr>
-      <tr><td>Day 5 · 1 Oct</td><td>~3,000</td><td>Temple entries + Grab taxis + birthday treats + tips</td></tr>
+      <tr><td>Day 5 · 1 Oct</td><td>~4,000</td><td>Siam Paragon shopping + Grab taxis + ICONSIAM + tips</td></tr>
       <tr><td>Day 6 · 2 Oct</td><td>~500</td><td>Taxi to airport</td></tr>
       <tr><td>Shopping buffer</td><td>5,000–8,000</td><td>Souvenirs, clothes, extra food, emergencies</td></tr>
       <tr><td>TOTAL ESTIMATE</td><td>~16,000–18,600</td><td>You have 40,000 THB — very comfortable buffer remaining</td></tr>
